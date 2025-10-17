@@ -64,8 +64,12 @@ nav svg{
 }
 
 nav a:hover {
-    
+    color: var(--backgrond-color);
 }
+
+.main-li a {
+    color: var(--primary-color) !important;
+  }
 
 nav p {
     font-weight: 800;
