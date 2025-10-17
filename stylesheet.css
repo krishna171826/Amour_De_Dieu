@@ -290,10 +290,15 @@ nav li:first-child {
 /* ===== chiffre ===== */
 
 .chiffre {
-    height: 100vh;
-    background-image: url(assert/generated-image\ 2.jpeg);
-    background-size: cover;
-}
+    min-height: 100vh; /* full screen at least, grows with content */
+    background-image: url('assert/generated-image 2.jpeg');
+    background-size: cover; /* stretches nicely */
+    background-repeat: no-repeat;
+    background-position: center center; /* stays centered */
+    width: 100%;
+    padding: 5rem 0; /* adds breathing room */
+  }
+
 
 
 .header-chiffre {
