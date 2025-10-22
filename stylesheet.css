@@ -617,10 +617,12 @@ nav li:first-child {
 /* horizontale scroll bar*/
 
 
+
 .hsb {
-    min-height: 100vh;
+    /* Remove min-height if it's forcing overflow */
     background-color: var(--backgrond-color);
-  }
+    padding-bottom: 50px; /* Add some breathing room instead */
+}
 
 .header-hsb {
     text-align: center;
@@ -710,12 +712,14 @@ nav li:first-child {
     display: flex;
     gap: 20px;
     overflow-x: auto;
+    overflow-y: hidden; /* We prevent vertical scroll INSIDE the container */
     scroll-behavior: smooth;
     padding-bottom: 10px;
     max-width: 80%;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE & Edge */
+    height: auto;  /* Important: let it expand naturally */
+    scrollbar-width: none; 
 }
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .carousel-cards::-webkit-scrollbar {
@@ -730,13 +734,18 @@ nav li:first-child {
     border-radius: 6px;
     background: white;
     transition: transform 0.3s, background 0.3s;
+    height: auto;    /* allow natural height */
+    overflow: visible;
 }
+
 
 .news-card.active {
     background: #001B66;
     color: white;
-    transform: scale(1.1);
+    transform: translateY(-5px); /* hover effect without increasing height */
+    /* Remove scale(1.1); */
 }
+
 
 .card-image img {
     width: 100%;
@@ -774,3 +783,50 @@ nav li:first-child {
     background: white;
     color: #00154f;
 }
+
+@media (max-width: 800px) {
+    .hsb {
+      padding: 20px 10px;
+    }
+  
+    .title-hsb {
+      font-size: 2.5rem;
+    }
+  
+    .carousel-container {
+      gap: 10px;
+    }
+
+    .carousel-nav {
+      display: none;
+    }
+  
+    .carousel-cards {
+      max-width: 100%;
+      padding-bottom: 15px;
+    }
+  
+    .news-card {
+      width: 210px;       /* Smaller width for phone */
+      padding: 10px;
+    }
+  
+    .card-image img {
+      height: 120px;      /* Adjust image size */
+    }
+  
+    .card-text .text-line {
+      font-size: 0.75rem;
+      padding: 0.4rem;
+    }
+  
+    .card-text .text-line.short {
+      font-size: 0.75rem;
+    }
+  
+    /* Remove transform scaling for active card on small screens */
+    .news-card.active {
+      transform: translateY(-3px); 
+    }
+  }
+  
