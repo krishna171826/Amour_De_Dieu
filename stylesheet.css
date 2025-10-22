@@ -623,7 +623,7 @@ nav li:first-child {
     /* Remove min-height if it's forcing overflow */
     background-color: var(--backgrond-color);
     padding-bottom: 50px; /* Add some breathing room instead */
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 
 .header-hsb {
