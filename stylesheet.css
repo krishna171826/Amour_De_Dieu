@@ -614,24 +614,21 @@ nav li:first-child {
 
 
 
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-
+/* horizontale scroll bar*/
 
 
-  .hsb {
+.hsb {
     min-height: 100vh;
-    background-color: #fff;
-    
+    background-color: var(--backgrond-color);
   }
 
-  .header-hsb {
+.header-hsb {
     text-align: center;
     margin-bottom: 2rem;
     margin-top: 4rem;
   }
   
-  .title-hsb {
+.title-hsb {
     font-weight: 800;
     font-size: 3.5rem;
     display: flex;
@@ -642,13 +639,13 @@ nav li:first-child {
     position: relative;
   }
   
-  .highlight-hsb {
+.highlight-hsb {
     position: relative;
     display: inline-block;
     z-index: 1;
   }
   
-  .highlight-hsb::before {
+.highlight-hsb::before {
     content: "";
     position: absolute;
     bottom: 0.1em;
@@ -666,7 +663,7 @@ nav li:first-child {
 
 
 
-  .news-section {
+.news-section {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -777,4 +774,3 @@ nav li:first-child {
     background: white;
     color: #00154f;
 }
-
