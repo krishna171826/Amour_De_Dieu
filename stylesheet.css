@@ -524,6 +524,7 @@ nav li:first-child {
     flex-direction: column;
     gap: 60px;
     align-items: center;
+    padding-bottom: 7rem;
   }
   
   /* === Carte === */
