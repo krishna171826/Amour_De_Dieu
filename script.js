@@ -1,3 +1,4 @@
+// menu bar
 function showSidebar(){
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex'
@@ -19,16 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let currentIndex = 1; // Start with second card as active
 
-    // ✅ Function: update active card UI
+    // Function: update active card 
     function updateActiveCard() {
         cards.forEach((card, index) => {
             card.classList.toggle('active', index === currentIndex);
         });
     }
 
-    // ✅ Function: scroll to the active card
+    // Function: scroll to the active card
     function scrollToCard(index) {
-        const cardWidth = cards[0].offsetWidth + 20; // width + gap
+        const cardWidth = cards[0].offsetWidth + 20; 
         const scrollPosition = (index * cardWidth) - (carouselCards.offsetWidth / 2) + (cardWidth / 2);
         carouselCards.scrollTo({
             left: scrollPosition,
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ✅ Arrow button functionality (for desktop)
+    // Arrow button functionality (for desktop)
     prevBtn.addEventListener('click', function () {
         currentIndex = (currentIndex - 1 + cards.length) % cards.length;
         updateActiveCard();
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollToCard(currentIndex);
     });
 
-    // ✅ Auto-detect active card on scroll (for phones)
+    // Auto-detect active card on scroll (for phones)
     carouselCards.addEventListener('scroll', function () {
         const cardWidth = cards[0].offsetWidth + 20;
         const scrollCenter = carouselCards.scrollLeft + carouselCards.offsetWidth / 2;
@@ -62,18 +63,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // ✅ Hide arrows on small screens
+    // Hide arrows on small screens
     function handleArrowVisibility() {
         const isMobile = window.innerWidth <= 768;
         prevBtn.style.display = isMobile ? 'none' : 'block';
         nextBtn.style.display = isMobile ? 'none' : 'block';
     }
 
-    // ✅ Initialize everything
+    // Initialize everything
     updateActiveCard();
     handleArrowVisibility();
-    scrollToCard(currentIndex); // center second card on load
+    scrollToCard(currentIndex); 
 
-    // ✅ Recheck arrow visibility on resize
+    //  Recheck arrow visibility on resize
     window.addEventListener('resize', handleArrowVisibility);
 });
