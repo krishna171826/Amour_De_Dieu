@@ -319,13 +319,13 @@ nav li:first-child {
 /* ===== chiffre ===== */
 
 .chiffre {
-    min-height: 100vh; /* full screen at least, grows with content */
+    min-height: 100vh; 
     background-image: url('assert/generated-image 2.jpeg');
-    background-size: cover; /* stretches nicely */
+    background-size: cover; 
     background-repeat: no-repeat;
-    background-position: center center; /* stays centered */
+    background-position: center center; 
     width: 100%;
-    padding: 0rem 0; /* adds breathing room */
+    padding: 0rem 0; 
   }
 
 
@@ -620,9 +620,8 @@ nav li:first-child {
 
 
 .hsb {
-    /* Remove min-height if it's forcing overflow */
     background-color: var(--backgrond-color);
-    padding-bottom: 50px; /* Add some breathing room instead */
+    padding-bottom: 50px; 
     padding-top: 2rem;
 }
 
@@ -714,16 +713,15 @@ nav li:first-child {
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    overflow-y: hidden; /* We prevent vertical scroll INSIDE the container */
+    overflow-y: hidden; 
     scroll-behavior: smooth;
     padding-bottom: 10px;
     max-width: 80%;
-    height: auto;  /* Important: let it expand naturally */
+    height: auto;  
     scrollbar-width: none; 
 }
 
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 .carousel-cards::-webkit-scrollbar {
     display: none;
 }
@@ -744,8 +742,7 @@ nav li:first-child {
 .news-card.active {
     background: #001B66;
     color: white;
-    transform: translateY(-5px); /* hover effect without increasing height */
-    /* Remove scale(1.1); */
+    transform: translateY(-5px); 
 }
 
 
@@ -809,12 +806,12 @@ nav li:first-child {
     }
   
     .news-card {
-      width: 210px;       /* Smaller width for phone */
+      width: 210px;      
       padding: 10px;
     }
   
     .card-image img {
-      height: 120px;      /* Adjust image size */
+      height: 120px;     
     }
   
     .card-text .text-line {
@@ -825,8 +822,7 @@ nav li:first-child {
     .card-text .text-line.short {
       font-size: 0.75rem;
     }
-  
-    /* Remove transform scaling for active card on small screens */
+
     .news-card.active {
       transform: translateY(-3px); 
     }
