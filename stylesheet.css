@@ -836,7 +836,7 @@ nav li:first-child {
 
   .mem {
     min-height: 100vh;
-    background-image: url(assert/member/mem-back\ .jpeg);
+    background-image: url(assert/mem-back\ .jpeg);
     background-size: cover;
     background-position: center center;
     width: 100%;
