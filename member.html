@@ -34,71 +34,74 @@
           </header>
 
 
-          <div class="form-container">
+       <div class="form-container">
+            <form class="info-form" action="https://formsubmit.co/gopikrishna1718@gmail.com" method="POST">
 
-            <form class="info-form">
-        
+                <!-- Formsubmit hidden fields -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="Nouvelle demande d'adhésion">
+                <input type="hidden" name="_next" value="https://krishna171826.github.io/Amour_De_Dieu/merci.html">
+
                 <div class="row">
                     <label>Nom :</label>
-                    <input type="text" name="nom">
-        
+                    <input type="text" name="nom" required>
+
                     <label>Prénom :</label>
-                    <input type="text" name="prenom">
+                    <input type="text" name="prenom" required>
                 </div>
-        
+
                 <div class="row">
                     <label>Numéro :</label>
-                    <input type="text" name="number">
-        
+                    <input type="text" name="number" required>
+
                     <label>E-mail :</label>
-                    <input type="email" name="email">
+                    <input type="email" name="email" required>
                 </div>
-        
+
                 <div class="row">
                     <label>Date de naissance :</label>
-                    <input type="text" name="date_naissance" placeholder="JJ/MM/AAAA">
-        
+                    <input type="text" name="date_naissance" placeholder="JJ/MM/AAAA" required>
+
                     <label></label>
                     <div></div>
                 </div>
-        
+
                 <div class="row">
                     <label>Adresse :</label>
-                    <input type="text" name="address">
-        
+                    <input type="text" name="address" required>
+
                     <label>Code-postal :</label>
-                    <input type="text" name="code_postal">
+                    <input type="text" name="code_postal" required>
                 </div>
-        
+
                 <div class="row">
                     <label>Ville :</label>
-                    <input type="text" name="city">
+                    <input type="text" name="city" required>
                 </div>
-        
+
                 <div class="">
                     <label>Choix du statut de membre :</label>
-        
+
                     <div class="radio-group">
                         <label class="radio-option">
-                            <input type="radio" name="statut_membre" value="active">
+                            <input type="radio" name="statut_membre" value="active" required>
                             Membre actif (participation aux activités)
                         </label>
-        
+
                         <label class="radio-option">
-                            <input type="radio" name="statut_membre" value="bienfaiteur">
+                            <input type="radio" name="statut_membre" value="bienfaiteur" required>
                             Membre bienfaiteur (soutien financier sans engagement)
                         </label>
                     </div>
                 </div>
-        
+
                 <div class="row submit-row">
                     <button type="submit" class="submit-btn">Envoyer</button>
                 </div>
-        
+
             </form>
-        
         </div>
-        
         
           
 
